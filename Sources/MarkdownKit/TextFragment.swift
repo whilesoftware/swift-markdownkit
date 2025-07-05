@@ -44,7 +44,7 @@ public enum TextFragment: Equatable, CustomStringConvertible, CustomDebugStringC
   public var description: String {
     switch self {
       case .text(let str):
-        return str.description
+        return str == "" ? "\u{00a0}" : str.description
       case .code(let str):
         return "`\(str.description)`"
       case .emph(let text):

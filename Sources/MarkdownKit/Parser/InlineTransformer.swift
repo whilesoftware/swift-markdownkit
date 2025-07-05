@@ -48,8 +48,12 @@ open class InlineTransformer {
                       from iterator: inout Text.Iterator,
                       into res: inout Text) -> TextFragment? {
     switch fragment {
-      case .text(_):
-        res.append(fragment: fragment)
+      case .text(let str):
+        if str == "\u{00a0}" {
+            res.append(fragment: .text(""))
+        } else {
+            res.append(fragment: fragment)
+        }
       case .code(_):
         res.append(fragment: fragment)
       case .emph(let inner):

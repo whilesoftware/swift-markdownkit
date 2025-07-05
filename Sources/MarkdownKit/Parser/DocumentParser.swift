@@ -117,6 +117,10 @@ open class DocumentParser {
       return
     }
     if let lines = self.prevParagraphLines {
+//      print("appending 'prevParagraphLines' to container as a .paragraph")
+//        print(lines)
+//        print("--")
+//        print("finalized: \(lines.finalized())")
       self.container.append(block: .paragraph(lines.finalized()), tight: self.prevParagraphLinesTight)
       self.container = self.container.return(to: self.currentContainer, for: self)
       self.prevParagraphLines = nil
@@ -153,6 +157,7 @@ open class DocumentParser {
                                                            endIndex: self.index!)
     self.currentContainer = container
     self.line = self.input[newstart..<self.index!]
+//    print(">> read line: '''\(self.line)'''")
     if index < self.input.endIndex {
       self.contentEndIndex = self.line.index(before: self.line.endIndex)
     } else {
@@ -194,13 +199,14 @@ open class DocumentParser {
   public func parse() -> Block {
     loop: while !self.finished {
       if self.lineEmpty {
+//        print(">>> line is empty, will readNextLine()")
         if let encl = self.container.outermostIndentRequired(upto: self.currentContainer) {
-          // print("container <- \(encl) | \(self.currentContainer)")
+//           print("container <- \(encl) | \(self.currentContainer)")
           self.container = self.container.return(to: encl, for: self)
         }
         self.readNextLine()
       } else {
-        // print("container <= \(self.currentContainer)")
+//         print("container <= \(self.currentContainer)")
         self.container = self.container.return(to: self.currentContainer, for: self)
         self.currentContainer = self.container
         for blockParser in self.blockParsers {

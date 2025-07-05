@@ -102,11 +102,21 @@ open class InlineParser {
       case .listItem(let type, let tight, let blocks):
         return .listItem(type, tight, self.parse(blocks))
       case .paragraph(let lines):
-        return .paragraph(self.transform(lines))
+        let transformed = self.transform(lines)
+//        print("----------------")
+//        print("raw paragraph: \(lines)")
+//        print("transformed: \(transformed.debugDescription)")
+//        print("^^^^^^^^^^^^^^^^")
+        return .paragraph(transformed)
       case .thematicBreak:
         return .thematicBreak
       case .heading(let level, let lines):
-        return .heading(level, self.transform(lines))
+        let transformed = self.transform(lines)
+//        print("----------------")
+//        print("raw heading: \(lines)")
+//        print("transformed: \(transformed)")
+//        print("^^^^^^^^^^^^^^^^")
+        return .heading(level, transformed)
       case .indentedCode(let lines):
         return .indentedCode(lines)
       case .fencedCode(let info, let lines):
