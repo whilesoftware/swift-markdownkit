@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CFC7E8A2DCE8503007FA1FF /* FastAttributedStringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC7E892DCE8503007FA1FF /* FastAttributedStringGenerator.swift */; };
-		0CFC7E8B2DCE8503007FA1FF /* FastAttributedStringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC7E892DCE8503007FA1FF /* FastAttributedStringGenerator.swift */; };
 		CC088C0B22DB74090059460E /* TextFragment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC088C0A22DB74090059460E /* TextFragment.swift */; };
 		CC088C0F22DD2BCD0059460E /* HtmlGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC088C0E22DD2BCD0059460E /* HtmlGenerator.swift */; };
 		CC088C2422E337BD0059460E /* MarkdownHtmlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC088C2322E337BD0059460E /* MarkdownHtmlTests.swift */; };
@@ -126,7 +124,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0CFC7E892DCE8503007FA1FF /* FastAttributedStringGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastAttributedStringGenerator.swift; sourceTree = "<group>"; };
 		CC088C0A22DB74090059460E /* TextFragment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFragment.swift; sourceTree = "<group>"; };
 		CC088C0E22DD2BCD0059460E /* HtmlGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlGenerator.swift; sourceTree = "<group>"; };
 		CC088C2322E337BD0059460E /* MarkdownHtmlTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownHtmlTests.swift; sourceTree = "<group>"; };
@@ -221,14 +218,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CFC7E8C2DCE9EBB007FA1FF /* Fast */ = {
-			isa = PBXGroup;
-			children = (
-				0CFC7E892DCE8503007FA1FF /* FastAttributedStringGenerator.swift */,
-			);
-			path = Fast;
-			sourceTree = "<group>";
-		};
 		CC088C0C22DD2B960059460E /* HTML */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,7 +267,6 @@
 		CC2AF6EA227CD98100BEA420 /* MarkdownKit */ = {
 			isa = PBXGroup;
 			children = (
-				0CFC7E8C2DCE9EBB007FA1FF /* Fast */,
 				CC8CBC1E2286CED60084683B /* Blocks.swift */,
 				CCB033CC227CDB2F00E1C4DC /* Block.swift */,
 				CC87987E264B431F006950A7 /* CustomBlock.swift */,
@@ -536,7 +524,6 @@
 				CC7B603B22AC6AB40092188C /* DelimiterTransformer.swift in Sources */,
 				CCD0746822A060CF0053B73C /* Text.swift in Sources */,
 				CC879880264B43BD006950A7 /* CustomTextFragment.swift in Sources */,
-				0CFC7E8B2DCE8503007FA1FF /* FastAttributedStringGenerator.swift in Sources */,
 				CC879881264B43C1006950A7 /* CustomBlock.swift in Sources */,
 				CC8CBC2322884F940084683B /* SetextHeadingParser.swift in Sources */,
 				CC3E4F532309FE9100C8A3DD /* Color.swift in Sources */,
@@ -603,7 +590,6 @@
 				CCC48BAE25CA157600D082AD /* ExtendedMarkdownParser.swift in Sources */,
 				CCC48BA825CA157600D082AD /* MarkdownParser.swift in Sources */,
 				CCB7B0D3296240E200F0DB20 /* CustomTextFragment.swift in Sources */,
-				0CFC7E8A2DCE8503007FA1FF /* FastAttributedStringGenerator.swift in Sources */,
 				CCB7B0D4296240F400F0DB20 /* CustomBlock.swift in Sources */,
 				CCC48BEB25CA1E8000D082AD /* Color.swift in Sources */,
 				CCC48BAA25CA157600D082AD /* DelimiterTransformer.swift in Sources */,
